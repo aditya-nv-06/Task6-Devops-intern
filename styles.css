@@ -12,6 +12,7 @@
     --max-width: 1200px;
     --spacing-unit: 1rem;
     --transition-speed: 0.3s;
+    --hamburger-transform-offset: 7px;
 }
 
 /* Reset and base styles */
@@ -101,7 +102,7 @@ nav a:focus {
 
 /* Hamburger animation when active */
 .hamburger[aria-expanded="true"] span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(var(--hamburger-transform-offset)) rotate(45deg);
 }
 
 .hamburger[aria-expanded="true"] span:nth-child(2) {
@@ -109,7 +110,7 @@ nav a:focus {
 }
 
 .hamburger[aria-expanded="true"] span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(calc(-1 * var(--hamburger-transform-offset))) rotate(-45deg);
 }
 
 /* Hero section */

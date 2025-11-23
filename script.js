@@ -51,6 +51,9 @@
 
 // Client-side form validation
 (function initFormValidation() {
+    // Configuration constants
+    const SUCCESS_MESSAGE_TIMEOUT = 5000; // milliseconds
+    
     const form = document.getElementById('contact-form');
     const successMessage = document.getElementById('form-success');
     
@@ -105,6 +108,8 @@
     });
     
     // Helper function to validate email format
+    // Note: This regex provides basic client-side validation.
+    // For production use, always validate email on the server side as well.
     function isValidEmail(email) {
         // More robust email validation pattern
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -142,10 +147,10 @@
             successMessage.textContent = 'Thank you for your message! We will get back to you soon.';
             successMessage.classList.add('show');
             
-            // Hide success message after 5 seconds
+            // Hide success message after configured timeout
             setTimeout(function() {
                 successMessage.classList.remove('show');
-            }, 5000);
+            }, SUCCESS_MESSAGE_TIMEOUT);
         }
     }
     
