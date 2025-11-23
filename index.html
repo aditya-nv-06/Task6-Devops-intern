@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern, responsive website showcasing our services and solutions. Contact us to learn more about how we can help your business grow.">
+    <title>Modern Solutions - Your Partner in Success</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>ModernSolutions</h1>
+                    </div>
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <!-- Navigation Links -->
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Welcome to Modern Solutions</h2>
+                    <p>Innovative technology solutions tailored to your business needs. We help transform ideas into reality with cutting-edge tools and expertise.</p>
+                    <a href="#contact" class="cta-button">Get Started</a>
+                </div>
+                <!-- Hero Image Placeholder (SVG) -->
+                <div class="hero-image">
+                    <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="300" fill="#4A90E2" rx="10"/>
+                        <circle cx="200" cy="150" r="80" fill="#ffffff" opacity="0.2"/>
+                        <text x="200" y="160" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">Hero Image</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features/Services Section -->
+        <section id="services" class="features">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p class="section-description">We offer comprehensive solutions to help your business thrive in the digital age.</p>
+                
+                <div class="features-grid">
+                    <!-- Feature Card 1 -->
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="80" height="80" fill="#4A90E2" rx="8"/>
+                                <path d="M40 20 L60 40 L40 60 L20 40 Z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Build fast, responsive, and modern websites that engage your audience and drive results. Our expert team uses the latest technologies to create exceptional web experiences.</p>
+                    </article>
+
+                    <!-- Feature Card 2 -->
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="80" height="80" fill="#50C878" rx="8"/>
+                                <circle cx="40" cy="40" r="20" fill="#ffffff"/>
+                                <circle cx="40" cy="40" r="10" fill="#50C878"/>
+                            </svg>
+                        </div>
+                        <h3>Cloud Solutions</h3>
+                        <p>Leverage the power of cloud computing to scale your infrastructure efficiently. We provide secure, reliable, and cost-effective cloud migration and management services.</p>
+                    </article>
+
+                    <!-- Feature Card 3 -->
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="80" height="80" fill="#FF6B6B" rx="8"/>
+                                <rect x="25" y="25" width="30" height="30" fill="#ffffff"/>
+                                <rect x="30" y="30" width="20" height="20" fill="#FF6B6B"/>
+                            </svg>
+                        </div>
+                        <h3>Digital Marketing</h3>
+                        <p>Reach your target audience effectively with data-driven marketing strategies. From SEO to social media management, we help you grow your online presence.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p class="section-description">Have a project in mind? Let's discuss how we can help you achieve your goals.</p>
+                
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="successMessage" class="success-message" role="alert" aria-live="polite">
+                    <p>✓ Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 ModernSolutions. All rights reserved.</p>
+                <div class="footer-links">
+                    <!-- Note: These are placeholder links for demo purposes -->
+                    <a href="#home">Privacy Policy</a>
+                    <a href="#home">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
