@@ -29,6 +29,15 @@
                 hamburger.setAttribute('aria-expanded', 'false');
             }
         });
+
+        // Close menu when pressing Escape key for accessibility
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.focus(); // Return focus to hamburger button
+            }
+        });
     }
 })();
 
@@ -97,7 +106,8 @@
     
     // Helper function to validate email format
     function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // More robust email validation pattern
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return emailRegex.test(email);
     }
     
