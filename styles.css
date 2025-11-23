@@ -3,6 +3,7 @@
    =================================== */
 :root {
     --primary-color: #4A90E2;
+    --primary-color-dark: #3a7bc8;
     --secondary-color: #50C878;
     --accent-color: #FF6B6B;
     --text-dark: #333333;
@@ -331,7 +332,7 @@ header {
 }
 
 .submit-button:hover {
-    background-color: #3a7bc8;
+    background-color: var(--primary-color-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
